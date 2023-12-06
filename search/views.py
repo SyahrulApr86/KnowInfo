@@ -50,7 +50,7 @@ def index(request):
         else:  # jika ada hasil
 
             for score, doc in sorted_did_scores:
-                path_doc = os.path.dirname(__file__) + "\\" + doc.lstrip('.')
+                path_doc = os.path.dirname(__file__) + doc.lstrip('.')
                 with open(path_doc, encoding='utf-8') as file:
                     for line in file:
                         parts = doc.split('/')

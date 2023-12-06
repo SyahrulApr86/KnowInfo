@@ -169,6 +169,7 @@ def rerank_search_results(search_query, top_k=100):
             ranker = pickle.load(f)
 
     # Prediksi dan re-ranking
+    print(SERP)
     docs = prepare_docs(SERP)
     scores = predict_ranking(search_query, docs, ranker, lsi_model, dictionary)
 
